@@ -1,5 +1,7 @@
-#Click down Knob Movement
-##Rules
+# Click down Knob Movement
+
+## Rules
+
 ```
 // debug 1 for debug 0 for normal
 zz=0
@@ -28,12 +30,14 @@ ga=1
 if zz==1 then Log "Mouse move  at x=%uu% and y=%vv% and click down"
 if zz==1 then exit rules, skip Outgoing Action
 ```
-##Outgoing
+## Outgoing
+
 Mouse button clicks
 Set mouse position
 
-#Drag the mouse
-##Rules
+# Drag the mouse
+
+## Rules
 ```
 // here we don't do anything unless we have already clicked
 if ga==0 then exit rules, skip Outgoing Action
@@ -55,25 +59,33 @@ if zz==1 then Log "Dragging %rr%"
 
 if zz==1 then exit rules, skip Outgoing Action
 ```
-##Outgoing
+
+## Outgoing
+
 Mouse movement: rr pixels
 Delay: 5ms
 
 
-#Set a Click timer
-##Rules
+# Set a Click timer
+
+## Rules
+```
 // This is used to automatically click up if no movment
 // In this case we will set it up for 250 ms
+```
 
-##Outgoing
+## Outgoing
+
 Timer
 Activate Timer
 Click up Once
 Delay: 250ms
 
 
-#Click up Timer
-##Incoming
+# Click up Timer
+
+## Incoming
+
 Timer: Click up
 
 ##Rules
@@ -93,5 +105,6 @@ if zz==1 then Log "Click Up"
 if zz==1 then exit rules, skip Outgoing Action
 ```
 
-##Outgoing
+## Outgoing
+
 Mouse button clicks
