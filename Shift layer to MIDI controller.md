@@ -22,12 +22,13 @@ Set mouse position
 ## Incoming
 Note ON
 
-##Rules
+## Rules
 ```
 gc=0
 ```
 
-##Outgoing
+## Outgoing
+
 None
 
 
@@ -36,12 +37,12 @@ None
 ## Incoming
 Note ON
 
-##Rules
+## Rules
 ```
 gc=1
 ```
 
-##Outgoing
+## Outgoing
 None
 
 
@@ -50,7 +51,7 @@ None
 ## Incoming
 Note ON
 
-##Rules
+## Rules
 ```
 //Toggle Exxclusive OR function
 gc=gc^1
@@ -60,5 +61,5 @@ gc=gc^1
 //gc=pp
 ```
 
-##Outgoing
+## Outgoing
 None
