@@ -7,19 +7,23 @@ Active=1
 Comments=
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
 Incoming1=MID3<Incoming Action="MIDI"><Description>Turn on No.16</Description><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x7F"/></Simple></Incoming>
-Incoming10=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
-Incoming11=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
-Incoming12=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
-Incoming13=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x2D"/><Value2 num="0x7F"/></Simple></Incoming>
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x2D"/><Value2 num="0x7F"/></Simple></Incoming>
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x2D"/><Value2 num="0x00"/></Simple></Incoming>
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
 Incoming14=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
 Incoming15=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
 Incoming16=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
-Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x7F"/></Simple></Incoming>
-Incoming18=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x7F"/></Simple></Incoming>
-Incoming19=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x7F"/></Simple></Incoming>
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
+Incoming18=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
+Incoming19=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
 Incoming2=MID3<Incoming Action="MIDI"><Description>Turn on No.16</Description><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x7F"/></Simple></Incoming>
-Incoming20=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x00"/></Simple></Incoming>
-Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x00"/></Simple></Incoming>
+Incoming20=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
+Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x7F"/></Simple></Incoming>
+Incoming22=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x7F"/></Simple></Incoming>
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x7F"/></Simple></Incoming>
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x00"/></Simple></Incoming>
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x33"/><Value2 num="0x00"/></Simple></Incoming>
 Incoming3=MID3<Incoming Action="MIDI"><Description>Turn off No.16</Description><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x00"/></Simple></Incoming>
 Incoming4=MID3<Incoming Action="MIDI"><Description>Turn off No.16</Description><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x00"/></Simple></Incoming>
 Incoming5=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
@@ -30,19 +34,23 @@ Incoming9=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
 Name=Switch
 Name0=---------------------------------Printer Light-------------------------------------
 Name1=Turn on Printer Light control
-Name10=-----------------------------------Qualifier-----------------------------------------
-Name11=-----------------------------------Window-----------------------------------------
-Name12=----------------------------------Tracker-----------------------------------------
-Name13=------------------------------------Blur-----------------------------------------
-Name14=------------------------------------Key-----------------------------------------
-Name15=-----------------------------------Sizing-----------------------------------------
-Name16=------------------------------------Log-----------------------------------------
-Name17=Switch  to Log wheel
-Name18=Switch  to Log wheel
-Name19=Switch  to Log wheel
+Name10=Switch to Color Warper page
+Name11=Turn on Color Warper presets
+Name12=Turn off Color Warper control
+Name13=New Translator
+Name14=-----------------------------------Qualifier-----------------------------------------
+Name15=-----------------------------------Window-----------------------------------------
+Name16=----------------------------------Tracker-----------------------------------------
+Name17=------------------------------------Blur-----------------------------------------
+Name18=------------------------------------Key-----------------------------------------
+Name19=-----------------------------------Sizing-----------------------------------------
 Name2=Turn on Printer Light control
-Name20=Switch  to Log wheel
+Name20=------------------------------------Log-----------------------------------------
 Name21=Switch  to Log wheel
+Name22=Switch  to Log wheel
+Name23=Switch  to Log wheel
+Name24=Switch  to Log wheel
+Name25=Switch  to Log wheel
 Name3=Turn off Printer Light control
 Name4=Turn off Printer Light control
 Name5=------------------------------------Curves-------------------------------------------
@@ -60,11 +68,15 @@ Options14=Actv01Stop00OutO00
 Options15=Actv01Stop00OutO00
 Options16=Actv01Stop00OutO00
 Options17=Actv01Stop00OutO00
-Options18=Actv01Stop00OutO00Dlay50:Millis
+Options18=Actv01Stop00OutO00
 Options19=Actv01Stop00OutO00
 Options2=Actv01Stop00OutO00Dlay250:Millis
 Options20=Actv01Stop00OutO00
 Options21=Actv01Stop00OutO00
+Options22=Actv01Stop00OutO00Dlay50:Millis
+Options23=Actv01Stop00OutO00
+Options24=Actv01Stop00OutO00
+Options25=Actv01Stop00OutO00
 Options3=Actv01Stop00OutO00
 Options4=Actv01Stop00OutO00
 Options5=Actv01Stop00OutO00
@@ -74,19 +86,23 @@ Options8=Actv01Stop00OutO00
 Options9=Actv01Stop00OutO00
 Outgoing0=None
 Outgoing1=Pres04000DPrinter Light
-Outgoing10=None
-Outgoing11=None
-Outgoing12=None
+Outgoing10=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1124"/><Y num="922"/></Outgoing>
+Outgoing11=Pres04000CColor Warper
+Outgoing12=Pres06000CColor Warper
 Outgoing13=None
 Outgoing14=None
 Outgoing15=None
 Outgoing16=None
-Outgoing17=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="147"/><Y num="921"/></Outgoing>
-Outgoing18=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="475"/><Y num="963"/></Outgoing>
-Outgoing19=Pres040003Log
+Outgoing17=None
+Outgoing18=None
+Outgoing19=None
 Outgoing2=KAM3<Outgoing Action="KeyStrokes"><Type>Shortcut</Type><Keys><Key VK="17"/><Key VK="18"/><Key VK="192"/><Key Release="Y" VK="192"/><Key Release="Y" VK="18"/><Key Release="Y" VK="17"/></Keys></Outgoing>
-Outgoing20=Pres060003Log
-Outgoing21=Pres060007Primary
+Outgoing20=None
+Outgoing21=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="147"/><Y num="921"/></Outgoing>
+Outgoing22=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="475"/><Y num="963"/></Outgoing>
+Outgoing23=Pres040003Log
+Outgoing24=Pres060003Log
+Outgoing25=Pres060007Primary
 Outgoing3=Pres06000DPrinter Light
 Outgoing4=KAM10100KSQ100060110120C02C0212211
 Outgoing5=None
@@ -871,9 +887,53 @@ Outgoing9=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><
 PresetSwitchIgnore=0
 
 [Preset.6]
-Active=0
+Active=1
 Comments=
-Name=New (2) Preset
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x2A"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming10=Tim0TimT0008Click Up
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x24"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x29"/><Value2 var="tt" Type="SetVar"/></Simple></Incoming>
+Incoming4=Tim0TimT0007gc to 1
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x24"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type=""/></Incoming>
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Name=Color Warper
+Name0=SEP:Reset--------------------
+Name1=Reset All
+Name10=Click up timer
+Name2=Reset Hue
+Name3=Combine keystroke
+Name4=Set gc to 1
+Name5=Soften Hue
+Name6=SEP:Hue--------------------
+Name7=Click down knob movement
+Name8=Drag the mouse
+Name9=Set a Click timer
+Options0=Actv01Stop00OutO00
+Options1=Actv01Stop00OutO00
+Options10=Actv01Stop00OutO00StMa0000000Dlabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(ga==1)ga=0label002F__cmt>// forgot the outgoing action of click uplabel002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options2=Actv01Stop00OutO00StMa00000006label0028__cmt>//When gb=1 then execute reset huelabel0029__cmt>//When gb=0 then execute soften hueif(gc==1)executelabel0013__cmt>//Set gb to 1gb=1if(gc==0)noexecute
+Options3=Actv01Stop00OutO00StMa00000004label003C__cmt>//When pad14 is pressed change reset hue to soften hueif(tt>0)gc=0label0006__cmt>label0006__cmt>
+Options4=Actv01Stop00OutO00StMa00000001if(gc==0)gc=1
+Options5=Actv01Stop00OutO00StMa00000002label0027__cmt>//When gb is 0 execute soften hueif(gc==0)execute
+Options6=Actv01Stop00OutO00
+Options7=Actv01Stop00OutO00StMa0000001Alabel0027__cmt>// debug 1 for debug 0 for normalzz=0label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=500label001A__cmt>// vertical locationvv=500label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(ga==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firega=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativeif(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downif(zz==1)noexecute
+Options8=Actv01Stop00OutO00Dlay5:MillisStMa00000013label0041__cmt>// here we don't do anything unless we have already clickedif(ga==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0029__cmt>// add a multiplier. 3 in this caserr=rr*1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>label0032__cmt>// I just changed from left/right to up downlabel002B__cmt>// as it seams tha BiasFX2 needs thislabel003C__cmt>// set up gb for with knob position for next iterationgb=qqlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options9=Actv01Stop00OutO00StMa00000002label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 ms
+Outgoing0=None
+Outgoing1=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1862"/><Y num="961"/></Outgoing>
+Outgoing10=Mse10400
+Outgoing2=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1731"/><Y num="1263"/></Outgoing>
+Outgoing3=Tim0TimS0007gc to 11:1000:1
+Outgoing4=None
+Outgoing5=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1694"/><Y num="1264"/></Outgoing>
+Outgoing6=None
+Outgoing7=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="85"/><Y num="1265"/></Outgoing>
+Outgoing8=Mse200rr:0
+Outgoing9=Tim0TimS0008Click Up1:250:1
 PresetSwitchIgnore=0
 
 [Project]
