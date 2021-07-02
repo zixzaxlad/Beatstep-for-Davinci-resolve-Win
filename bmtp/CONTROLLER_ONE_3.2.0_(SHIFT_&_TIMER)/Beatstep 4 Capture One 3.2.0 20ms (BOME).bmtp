@@ -1,0 +1,857 @@
+; ------- Bome MIDI Translator: Signed Project File
+; ------- You can modify this file as you like, but that will invalidate
+; ------- the signature so that it cannot be opened in MT Player anymore.
+;
+[Preset.0]
+Name=SWITCHER
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=Shift DOWN enable SHIFT preset
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing0=Pres040008SHIFT ON
+Options0=Actv01Stop00OutO00
+Name1=Shift DOWN enable SHIFT preset
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing1=Pres060009SHIFT OFF
+Options1=Actv01Stop00OutO00
+Name2=Shift UP disable SHIFT preset
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x00"/></Simple></Incoming>
+Outgoing2=Pres040009SHIFT OFF
+Options2=Actv01Stop00OutO00
+Name3=Shift UP disable SHIFT preset
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x00"/></Simple></Incoming>
+Outgoing3=Pres060008SHIFT ON
+Options3=Actv01Stop00OutO00
+[Preset.1]
+Name=ALWAYS ACTIVE
+Active=1
+Comments=
+PresetSwitchIgnore=1
+Name0=- - - - - - - - - - - - ROTARIES 01-08
+Incoming0=None
+Outgoing0=None
+Options0=Actv00Stop00OutO00
+Name1=Exposure +
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing1=Tim0TimS0009Exposure+gw:0:20
+Options1=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name2=Exposure -
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing2=Tim0TimS0009Exposure-gw:0:20
+Options2=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name3=Exposure + Timer
+Incoming3=Tim0TimT0009Exposure+
+Outgoing3=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="81"/><Key Release="Y" VK="81"/><Key VK="81"/><Key Release="Y" VK="81"/><Key VK="81"/><Key Release="Y" VK="81"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options3=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name4=Exposure - Timer
+Incoming4=Tim0TimT0009Exposure-
+Outgoing4=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="81"/><Key Release="Y" VK="81"/><Key VK="81"/><Key Release="Y" VK="81"/><Key VK="81"/><Key Release="Y" VK="81"/><Key Release="Y" VK="18"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options4=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name5=- - - - - - - - - - - - Separator
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing5=None
+Options5=Actv00Stop00OutO00
+Name6=Contrast +
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x02"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing6=Tim0TimS0009Contrast+gw:0:20
+Options6=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name7=Contrast -
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x02"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing7=Tim0TimS0009Contrast-gw:0:20
+Options7=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name8=Contrast + Timer
+Incoming8=Tim0TimT0009Contrast+
+Outgoing8=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="87"/><Key Release="Y" VK="87"/><Key VK="87"/><Key Release="Y" VK="87"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options8=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name9=Contrast - Timer
+Incoming9=Tim0TimT0009Contrast-
+Outgoing9=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="87"/><Key Release="Y" VK="87"/><Key VK="87"/><Key Release="Y" VK="87"/><Key Release="Y" VK="18"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options9=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name10=- - - - - - - - - - - - Separator
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing10=None
+Options10=Actv00Stop00OutO00
+Name11=LevelsShadow +
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x03"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing11=Tim0TimS000DLevelsShadow+gw:0:20
+Options11=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name12=LevelsShadow -
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x03"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing12=Tim0TimS000DLevelsShadow-gw:0:20
+Options12=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name13=LevelsShadow + Timer
+Incoming13=Tim0TimT000DLevelsShadow+
+Outgoing13=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="83"/><Key Release="Y" VK="83"/><Key VK="83"/><Key Release="Y" VK="83"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options13=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name14=LevelsShadow - Timer
+Incoming14=Tim0TimT000DLevelsShadow-
+Outgoing14=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="83"/><Key Release="Y" VK="83"/><Key VK="83"/><Key Release="Y" VK="18"/><Key Release="Y" VK="83"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options14=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name15=- - - - - - - - - - - - Separator
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing15=None
+Options15=Actv00Stop00OutO00
+Name16=LevelsMid +
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x04"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing16=Tim0TimS000ALevelsMid+gw:0:20
+Options16=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name17=LevelsMid -
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x04"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing17=Tim0TimS000ALevelsMid-gw:0:20
+Options17=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name18=LevelsMid + Timer
+Incoming18=Tim0TimT000ALevelsMid+
+Outgoing18=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="77"/><Key Release="Y" VK="77"/><Key VK="77"/><Key Release="Y" VK="77"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options18=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name19=LevelsMid - Timer
+Incoming19=Tim0TimT000ALevelsMid-
+Outgoing19=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="16"/><Key VK="17"/><Key VK="18"/><Key VK="77"/><Key Release="Y" VK="77"/><Key VK="77"/><Key Release="Y" VK="77"/><Key Release="Y" VK="16"/><Key Release="Y" VK="18"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options19=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name20=- - - - - - - - - - - - Separator
+Incoming20=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing20=None
+Options20=Actv00Stop00OutO00
+Name21=LevelsHighlight +
+Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x05"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing21=Tim0TimS0010LevelsHighlight+gw:0:20
+Options21=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name22=LevelsHighlight -
+Incoming22=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x05"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing22=Tim0TimS0010LevelsHighlight-gw:0:20
+Options22=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name23=LevelsHighlight + Timer
+Incoming23=Tim0TimT0010LevelsHighlight+
+Outgoing23=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="68"/><Key Release="Y" VK="68"/><Key VK="68"/><Key Release="Y" VK="68"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options23=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name24=LevelsHighlight - Timer
+Incoming24=Tim0TimT0010LevelsHighlight-
+Outgoing24=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="16"/><Key VK="17"/><Key VK="18"/><Key VK="68"/><Key Release="Y" VK="68"/><Key VK="68"/><Key Release="Y" VK="68"/><Key Release="Y" VK="18"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options24=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name25=- - - - - - - - - - - - Separator
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing25=None
+Options25=Actv00Stop00OutO00
+Name26=Clarity +
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x06"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing26=Tim0TimS0008Clarity+gw:0:20
+Options26=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name27=Clarity -
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x06"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing27=Tim0TimS0008Clarity-gw:0:20
+Options27=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name28=Clarity + Timer
+Incoming28=Tim0TimT0008Clarity+
+Outgoing28=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="120"/><Key Release="Y" VK="120"/><Key VK="120"/><Key Release="Y" VK="120"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options28=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name29=Clarity - Timer
+Incoming29=Tim0TimT0008Clarity-
+Outgoing29=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="120"/><Key Release="Y" VK="120"/><Key VK="120"/><Key Release="Y" VK="120"/><Key Release="Y" VK="17"/><Key Release="Y" VK="18"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options29=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name30=- - - - - - - - - - - - Separator
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing30=None
+Options30=Actv00Stop00OutO00
+Name31=Structure +
+Incoming31=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x07"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing31=Tim0TimS000AStructure+gw:0:20
+Options31=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name32=Structure -
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x07"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing32=Tim0TimS000AStructure-gw:0:20
+Options32=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name33=Structure + Timer
+Incoming33=Tim0TimT000AStructure+
+Outgoing33=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="121"/><Key Release="Y" VK="121"/><Key VK="121"/><Key Release="Y" VK="121"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options33=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name34=Structure - Timer
+Incoming34=Tim0TimT000AStructure-
+Outgoing34=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="121"/><Key Release="Y" VK="121"/><Key VK="121"/><Key Release="Y" VK="121"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/><Key Release="Y" VK="18"/></Keys></Outgoing>
+Options34=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name35=- - - - - - - - - - - - Separator
+Incoming35=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing35=None
+Options35=Actv00Stop00OutO00
+Name36=Vignetting +
+Incoming36=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x08"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing36=Tim0TimS000BVignetting+gw:0:20
+Options36=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name37=Vignetting -
+Incoming37=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x08"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing37=Tim0TimS000BVignetting-gw:0:20
+Options37=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name38=Vignetting + Timer
+Incoming38=Tim0TimT000BVignetting+
+Outgoing38=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="122"/><Key Release="Y" VK="122"/><Key VK="122"/><Key Release="Y" VK="122"/><Key VK="122"/><Key Release="Y" VK="122"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options38=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name39=Vignetting- Timer
+Incoming39=Tim0TimT000BVignetting-
+Outgoing39=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="122"/><Key Release="Y" VK="122"/><Key VK="122"/><Key Release="Y" VK="122"/><Key VK="122"/><Key Release="Y" VK="122"/><Key Release="Y" VK="16"/><Key Release="Y" VK="18"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options39=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name40=- - - - - - - - - - - - ROTARIES 09-16
+Incoming40=None
+Outgoing40=None
+Options40=Actv00Stop00OutO00
+Name41=Brightness +
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x09"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing41=Tim0TimS000BBrightness+gw:0:20
+Options41=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name42=Brightness -
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x09"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing42=Tim0TimS000BBrightness-gw:0:20
+Options42=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name43=Brightness + Timer
+Incoming43=Tim0TimT000BBrightness+
+Outgoing43=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="82"/><Key Release="Y" VK="82"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options43=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name44=Brightness - Timer
+Incoming44=Tim0TimT000BBrightness-
+Outgoing44=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="16"/><Key VK="17"/><Key VK="18"/><Key VK="82"/><Key Release="Y" VK="82"/><Key Release="Y" VK="18"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options44=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name45=- - - - - - - - - - - - Separator
+Incoming45=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing45=None
+Options45=Actv00Stop00OutO00
+Name46=Saturation +
+Incoming46=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing46=Tim0TimS000BSaturation+gw:0:20
+Options46=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name47=Saturation -
+Incoming47=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing47=Tim0TimS000BSaturation-gw:0:20
+Options47=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name48=Saturation + Timer
+Incoming48=Tim0TimT000BSaturation+
+Outgoing48=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="89"/><Key Release="Y" VK="89"/><Key VK="89"/><Key Release="Y" VK="89"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options48=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name49=Saturation - Timer
+Incoming49=Tim0TimT000BSaturation-
+Outgoing49=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="89"/><Key Release="Y" VK="89"/><Key VK="89"/><Key Release="Y" VK="89"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/><Key Release="Y" VK="18"/></Keys></Outgoing>
+Options49=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name50=- - - - - - - - - - - - Separator
+Incoming50=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing50=None
+Options50=Actv00Stop00OutO00
+Name51=RecoverShadow +
+Incoming51=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0B"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing51=Tim0TimS000ERecoverShadow+gw:0:20
+Options51=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name52=RecoverShadow -
+Incoming52=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0B"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing52=Tim0TimS000ERecoverShadow-gw:0:20
+Options52=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name53=RecoverShadow + Timer
+Incoming53=Tim0TimT000ERecoverShadow+
+Outgoing53=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="85"/><Key Release="Y" VK="85"/><Key VK="85"/><Key Release="Y" VK="85"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options53=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name54=RecoverShadow - Timer
+Incoming54=Tim0TimT000ERecoverShadow-
+Outgoing54=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="85"/><Key Release="Y" VK="85"/><Key Release="Y" VK="16"/><Key Release="Y" VK="18"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options54=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name55=- - - - - - - - - - - - Separator
+Incoming55=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing55=None
+Options55=Actv00Stop00OutO00
+Name56=RecoverHighlights +
+Incoming56=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0C"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing56=Tim0TimS0012RecoverHighlights+gw:0:20
+Options56=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name57=RecoverHighlights -
+Incoming57=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0C"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing57=Tim0TimS0012RecoverHighlights-gw:0:20
+Options57=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name58=RecoverHighlights + Timer
+Incoming58=Tim0TimT0012RecoverHighlights+
+Outgoing58=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="219"/><Key Release="Y" VK="219"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options58=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name59=RecoverShadow - Timer
+Incoming59=Tim0TimT0012RecoverHighlights-
+Outgoing59=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="18"/><Key VK="219"/><Key Release="Y" VK="219"/><Key Release="Y" VK="18"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options59=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name60=- - - - - - - - - - - - Separator
+Incoming60=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing60=None
+Options60=Actv00Stop00OutO00
+Name61=Zoom +
+Incoming61=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0D"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing61=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="107"/><Key Release="Y" VK="107"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options61=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name62=Zoom -
+Incoming62=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0D"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing62=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="109"/><Key Release="Y" VK="109"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options62=Actv01Stop00OutO00
+Name63=- - - - - - - - - - - - Separator
+Incoming63=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing63=None
+Options63=Actv00Stop00OutO00
+Name64=BrushSize +
+Incoming64=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing64=Tim0TimS000ABrushSize+gw:0:20
+Options64=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name65=BrushSize -
+Incoming65=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0E"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing65=Tim0TimS000ABrushSize-gw:0:20
+Options65=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name66=BrushSize + Timer
+Incoming66=Tim0TimT000ABrushSize+
+Outgoing66=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="]"/><Key Char="]"/><Key Char="]"/></Keys></Outgoing>
+Options66=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name67=BrushSize - Timer
+Incoming67=Tim0TimT000ABrushSize-
+Outgoing67=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="["/><Key Char="["/><Key Char="["/></Keys></Outgoing>
+Options67=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name68=- - - - - - - - - - - - Separator
+Incoming68=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing68=None
+Options68=Actv00Stop00OutO00
+Name69=BrushHardness +
+Incoming69=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0F"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing69=Tim0TimS000EBrushHardness+gw:0:20
+Options69=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name70=BrushHardness -
+Incoming70=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0F"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing70=Tim0TimS000EBrushHardness-gw:0:20
+Options70=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name71=BrushHardness + Timer
+Incoming71=Tim0TimT000EBrushHardness+
+Outgoing71=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="}"/><Key Char="}"/><Key Char="}"/><Key Char="}"/></Keys></Outgoing>
+Options71=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name72=BrushHardness - Timer
+Incoming72=Tim0TimT000EBrushHardness-
+Outgoing72=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="{"/><Key Char="{"/><Key Char="{"/><Key Char="{"/></Keys></Outgoing>
+Options72=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name73=- - - - - - - - - - - - Separator
+Incoming73=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing73=None
+Options73=Actv00Stop00OutO00
+Name74=BrushOpacity +
+Incoming74=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing74=Tim0TimS000DBrushOpacity+gw:0:20
+Options74=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for positive movementif(pp<64)noexecutegw=pp-64
+Name75=BrushOpacity -
+Incoming75=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing75=Tim0TimS000DBrushOpacity-gw:0:20
+Options75=Actv01Stop00OutO00StMa00000005label002D__cmt>// If timer already running, do nothingif(gw!=0)noexecutelabel0036__cmt>// This translator is only for negative movementif(pp>64)noexecutegw=64-pp
+Name76=BrushOpacity + Timer
+Incoming76=Tim0TimT000DBrushOpacity+
+Outgoing76=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="18"/><Key Char="]"/><Key Char="]"/><Key Char="]"/><Key Char="]"/><Key Release="Y" VK="18"/></Keys></Outgoing>
+Options76=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name77=BrushOpacity - Timer
+Incoming77=Tim0TimT000DBrushOpacity-
+Outgoing77=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="18"/><Key Char="["/><Key Char="["/><Key Char="["/><Key Char="["/><Key Release="Y" VK="18"/></Keys></Outgoing>
+Options77=Actv01Stop00OutO00StMa00000002gw=gw-1if(gw<0)gw=0
+Name78=- - - - - - - - - - - - PADS
+Incoming78=None
+Outgoing78=None
+Options78=Actv00Stop00OutO00
+Name79=UNUSED
+Incoming79=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x01"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing79=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options79=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name80=UNUSED
+Incoming80=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x02"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing80=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options80=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name81=UNUSED
+Incoming81=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x03"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing81=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options81=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name82=UNUSED
+Incoming82=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x04"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing82=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options82=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name83=UNUSED
+Incoming83=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x05"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing83=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options83=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name84=AUTO ADJUST (ALWAYS ACTIVE)
+Incoming84=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x06"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing84=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="a"/></Keys></Outgoing>
+Options84=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name85=RESET PHOTO (ALWAYS ACTIVE)
+Incoming85=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x07"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing85=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="q"/></Keys></Outgoing>
+Options85=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name86=SHIFT
+Incoming86=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing86=KAM10100KSQ10002010210
+Options86=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name87=UNUSED
+Incoming87=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x09"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing87=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options87=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name88=UNUSED
+Incoming88=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0A"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing88=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options88=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name89=UNUSED
+Incoming89=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0B"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing89=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options89=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name90=UNUSED
+Incoming90=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0C"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing90=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options90=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name91=UNUSED
+Incoming91=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0D"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing91=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options91=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name92=UNUSED
+Incoming92=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0E"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing92=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="-"/></Keys></Outgoing>
+Options92=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name93=SELECT ALL  (ALWAYS ACTIVE)
+Incoming93=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0E"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing93=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="65"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options93=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name94=PREVIOUS (ALWAYS ACTIVE)
+Incoming94=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0F"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing94=KAM10100KSQ10004011125325211
+Options94=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name95=NEXT  (ALWAYS ACTIVE)
+Incoming95=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x10"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing95=KAM10100KSQ10004011127327211
+Options95=Actv01Stop00OutO00StMa00000001label0006__cmt>
+[Preset.2]
+Name=SHIFT OFF
+Active=0
+Comments=
+PresetSwitchIgnore=0
+Name0=UNUSED
+Incoming0=None
+Outgoing0=None
+Options0=Actv00Stop00OutO00
+Name1=ROTARIES 01-08 - - - - - - -
+Incoming1=None
+Outgoing1=None
+Options1=Actv00Stop00OutO00
+Name2=ROTARY 01 +
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing2=None
+Options2=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name3=ROTARY 01 -
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing3=None
+Options3=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name4=ROTARY 02 +
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x02"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing4=None
+Options4=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name5=ROTARY 02 -
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x02"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing5=None
+Options5=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name6=ROTARY 03 +
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x03"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing6=None
+Options6=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name7=ROTARY 03 -
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x03"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing7=None
+Options7=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name8=ROTARY 04 +
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x04"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing8=None
+Options8=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name9=ROTARY 04 -
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x04"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing9=None
+Options9=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name10=ROTARY 05 +
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x05"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing10=None
+Options10=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name11=ROTARY 05 -
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x05"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing11=None
+Options11=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name12=ROTARY 06 +
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x06"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing12=None
+Options12=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name13=ROTARY 06 -
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x06"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing13=None
+Options13=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name14=ROTARY 07 +
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x07"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing14=None
+Options14=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name15=ROTARY 07 -
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x07"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing15=None
+Options15=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name16=ROTARY 08 +
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x08"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing16=None
+Options16=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name17=ROTARY 08 -
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x08"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing17=None
+Options17=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name18=ROTARIES 09-16 - - - - - - -
+Incoming18=None
+Outgoing18=None
+Options18=Actv00Stop00OutO00
+Name19=ROTARY 09 +
+Incoming19=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x09"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing19=None
+Options19=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name20=ROTARY 09 -
+Incoming20=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x09"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing20=None
+Options20=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name21=ROTARY 10 +
+Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing21=None
+Options21=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name22=ROTARY 10 -
+Incoming22=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing22=None
+Options22=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name23=ROTARY 11 +
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0B"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing23=None
+Options23=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name24=ROTARY 11 -
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0B"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing24=None
+Options24=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name25=ROTARY 12 +
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0C"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing25=None
+Options25=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name26=ROTARY 12 -
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0C"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing26=None
+Options26=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name27=ROTARY 13 +
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0D"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing27=None
+Options27=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name28=ROTARY 13 -
+Incoming28=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0D"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing28=None
+Options28=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name29=ROTARY 14 +
+Incoming29=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0E"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing29=None
+Options29=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name30=ROTARY 14 -
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0E"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing30=None
+Options30=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name31=ROTARY 15 +
+Incoming31=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0F"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing31=None
+Options31=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name32=ROTARY 15 -
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0F"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing32=None
+Options32=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name33=ROTARY 16 +
+Incoming33=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing33=None
+Options33=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name34=ROTARY 16 -
+Incoming34=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing34=None
+Options34=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name35=PADS - - - - - - - - - - - - - -
+Incoming35=None
+Outgoing35=None
+Options35=Actv00Stop00OutO00
+Name36=COPY ADJUSTMENTS
+Incoming36=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x01"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing36=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="16"/><Key VK="17"/><Key VK="67"/><Key Release="Y" VK="67"/><Key Release="Y" VK="16"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options36=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name37=PASTE ADJUSTMENTS
+Incoming37=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x02"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing37=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="86"/><Key Release="Y" VK="86"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options37=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name38=SELECT LAYER DOWN
+Incoming38=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x03"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing38=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="49"/><Key Release="Y" VK="49"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options38=Actv01Stop00OutO00
+Name39=SELECT LAYER UP
+Incoming39=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x04"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing39=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="50"/><Key Release="Y" VK="50"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options39=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name40=BRUSH
+Incoming40=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x05"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing40=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="b"/></Keys></Outgoing>
+Options40=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name41=AUTO ADJUST (ALWAYS ACTIVE)
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x06"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing41=None
+Options41=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name42=RESET PHOTO (ALWAYS ACTIVE)
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x07"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing42=None
+Options42=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name43=SHIFT (ALWAYS ACTIVE)
+Incoming43=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing43=None
+Options43=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name44=MASK ON-OFF
+Incoming44=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x09"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing44=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="52"/><Key Release="Y" VK="52"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options44=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name45=FILL MASK
+Incoming45=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0A"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing45=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="55"/><Key Release="Y" VK="55"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options45=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name46=RADIAL MASK
+Incoming46=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0B"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing46=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="50"/><Key Release="Y" VK="50"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options46=Actv01Stop00OutO00
+Name47=BACKGROUND LAYER
+Incoming47=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0C"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing47=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="16"/><Key VK="49"/><Key Release="Y" VK="49"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options47=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name48=ERASER
+Incoming48=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0D"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing48=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="e"/></Keys></Outgoing>
+Options48=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name49=SELECT ALL  (ALWAYS ACTIVE)
+Incoming49=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0E"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing49=None
+Options49=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name50=PREVIOUS(ALWAYS ACTIVE)
+Incoming50=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0F"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing50=None
+Options50=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name51=NEXT  (ALWAYS ACTIVE)
+Incoming51=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x10"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing51=None
+Options51=Actv00Stop00OutO00StMa00000001label0006__cmt>
+[Preset.3]
+Name=SHIFT ON
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=UNUSED
+Incoming0=None
+Outgoing0=None
+Options0=Actv00Stop00OutO00
+Name1=ROTARIES 01-08 - - - - - - -
+Incoming1=None
+Outgoing1=None
+Options1=Actv00Stop00OutO00
+Name2=ROTARY 01 +
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing2=None
+Options2=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name3=ROTARY 01 -
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x01"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing3=None
+Options3=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name4=ROTARY 02 +
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x02"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing4=None
+Options4=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name5=ROTARY 02 -
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x02"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing5=None
+Options5=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name6=ROTARY 03 +
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x03"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing6=None
+Options6=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name7=ROTARY 03 -
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x03"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing7=None
+Options7=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name8=ROTARY 04 +
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x04"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing8=None
+Options8=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name9=ROTARY 04 -
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x04"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing9=None
+Options9=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name10=ROTARY 05 +
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x05"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing10=None
+Options10=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name11=ROTARY 05 -
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x05"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing11=None
+Options11=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name12=ROTARY 06 +
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x06"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing12=None
+Options12=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name13=ROTARY 06 -
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x06"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing13=None
+Options13=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name14=ROTARY 07 +
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x07"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing14=None
+Options14=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name15=ROTARY 07 -
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x07"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing15=None
+Options15=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name16=ROTARY 08 +
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x08"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing16=None
+Options16=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name17=ROTARY 08 -
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x08"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing17=None
+Options17=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name18=ROTARIES 09-16 - - - - - - -
+Incoming18=None
+Outgoing18=None
+Options18=Actv00Stop00OutO00
+Name19=ROTARY 09 +
+Incoming19=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x09"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing19=None
+Options19=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name20=ROTARY 09 -
+Incoming20=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x09"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing20=None
+Options20=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name21=ROTARY 10 +
+Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing21=None
+Options21=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name22=ROTARY 10 -
+Incoming22=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing22=None
+Options22=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name23=ROTARY 11 +
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0B"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing23=None
+Options23=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name24=ROTARY 11 -
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0B"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing24=None
+Options24=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name25=ROTARY 12 +
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0C"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing25=None
+Options25=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name26=ROTARY 12 -
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0C"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing26=None
+Options26=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name27=ROTARY 13 +
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0D"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing27=None
+Options27=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name28=ROTARY 13 -
+Incoming28=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0D"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing28=None
+Options28=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name29=ROTARY 14 +
+Incoming29=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0E"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing29=None
+Options29=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name30=ROTARY 14 -
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0E"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing30=None
+Options30=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name31=ROTARY 15 +
+Incoming31=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0F"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing31=None
+Options31=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name32=ROTARY 15 -
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0F"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing32=None
+Options32=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name33=ROTARY 16 +
+Incoming33=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 num="0x41"/></Simple></Incoming>
+Outgoing33=None
+Options33=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name34=ROTARY 16 -
+Incoming34=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 num="0x3F"/></Simple></Incoming>
+Outgoing34=None
+Options34=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name35=PADS - - - - - - - - - - - - - -
+Incoming35=None
+Outgoing35=None
+Options35=Actv00Stop00OutO00
+Name36=USED BY SHIFT
+Incoming36=None
+Outgoing36=None
+Options36=Actv00Stop00OutO00
+Name37=RESET RATING
+Incoming37=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x01"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing37=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="96"/><Key Release="Y" VK="96"/></Keys></Outgoing>
+Options37=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name38=SET RATING *
+Incoming38=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x02"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing38=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="1"/><Key VK="17"/><Key Ext="Y" VK="39"/><Key Release="Y" Ext="Y" VK="39"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options38=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name39=SET RATING **
+Incoming39=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x03"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing39=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="2"/><Key VK="17"/><Key Ext="Y" VK="39"/><Key Release="Y" Ext="Y" VK="39"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options39=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name40=SET RATING ***
+Incoming40=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x04"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing40=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="3"/><Key VK="17"/><Key Ext="Y" VK="39"/><Key Release="Y" Ext="Y" VK="39"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options40=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name41=MOVE TO SELECTS
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x05"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing41=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="s"/></Keys></Outgoing>
+Options41=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name42=AUTO ADJUST (ALWAYS ACTIVE)
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x06"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing42=None
+Options42=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name43=RESET PHOTO (ALWAYS ACTIVE)
+Incoming43=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x07"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing43=None
+Options43=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name44=SHIFT (ALWAYS ACTIVE)
+Incoming44=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x08"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing44=None
+Options44=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name45=TOGGLE RATING NONE
+Incoming45=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x09"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing45=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="17"/><Key VK="96"/><Key Release="Y" VK="96"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Options45=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name46=TOGGLE RATING *
+Incoming46=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0A"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing46=KAM10100KSQ10006011012031212231211
+Options46=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name47=TOGGLE RATING **
+Incoming47=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0B"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing47=KAM10100KSQ10006011012032212211232
+Options47=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name48=TOGGLE RATING ***
+Incoming48=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0C"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing48=KAM10100KSQ10006011012033212233211
+Options48=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name49=MOVE TO SESSION TRASH
+Incoming49=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0D"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing49=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key VK="16"/><Key Ext="Y" VK="46"/><Key Release="Y" Ext="Y" VK="46"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+Options49=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name50=SELECT ALL  (ALWAYS ACTIVE)
+Incoming50=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0E"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing50=None
+Options50=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name51=PREVIOUS (ALWAYS ACTIVE)
+Incoming51=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x0F"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing51=None
+Options51=Actv00Stop00OutO00StMa00000001label0006__cmt>
+Name52=NEXT  (ALWAYS ACTIVE)
+Incoming52=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x10"/><Value2 num="0x01"/></Simple></Incoming>
+Outgoing52=None
+Options52=Actv00Stop00OutO00StMa00000001label0006__cmt>
+[Project]
+Version=2
+Author=Willem Blancke & William Pompen
+AuthorContact=
+Comments=
+AuthorWWW=willemblancke.be / phodograf.com
+AuthorCopyright=
+DefaultInPorts=MIDA00010010Arturia BeatStep
+DefaultOutPorts=MIDA00010010Arturia BeatStep
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=hfqhs/C4T6nXzySqfmqAl37yNcX1LAM8cvLz97YZH65q32z99zwNtSHAuX0oI5gDOMVpCepssZAxuZIsIg84Cr2n+zYJSGtdvrWLvW9tD7+v5kiRc2Q1UWIOFLY0i5r4sTwkJ2Vo6fE9Ftsqx+kwVqroax3D9YiPbCHOfUfJx58=
+SignedBy-1=William Pompen

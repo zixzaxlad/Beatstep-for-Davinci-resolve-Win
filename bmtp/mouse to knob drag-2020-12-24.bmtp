@@ -1,0 +1,36 @@
+; ------- Bome MIDI Translator: signed project file
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[Preset.0]
+Active=1
+Comments=
+Incoming0=MID1B000qq
+Incoming1=MID1B000qq
+Incoming2=MID1B000qq
+Incoming3=Tim0TimT0008Click Up
+Name=New Preset
+Name0=Click Down upon knob movement
+Name1=Now Drag the mouse
+Name2=Set a Click Up timer
+Name3=Click Up Timer
+Options0=Actv01Stop00OutO00StMa0000000Elabel0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(ga==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firega=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaative
+Options1=Actv01Stop00OutO00Dlay5:MillisStMa0000000Elabel0041__cmt>// here we don't do anything unless we have already clickedif(ga==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>gb)rr=-1if(qq<gb)rr=1label0029__cmt>// add a multiplier. 3 in this caserr=rr*3label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>label0032__cmt>// I just changed from left/right to up downlabel002B__cmt>// as it seams tha BiasFX2 needs thislabel003C__cmt>// set up gb for with knob position for next iterationgb=qq
+Options2=Actv01Stop00OutO00StMa00000003label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>
+Options3=Actv01Stop00OutO00StMa0000000Blabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(ga==1)ga=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end values
+Outgoing0=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="-1715"/><Y num="486"/></Outgoing>
+Outgoing1=Mse2000:rr
+Outgoing2=Tim0TimS0008Click Up1:250:1
+Outgoing3=Mse10400
+PresetSwitchIgnore=0
+
+[Project]
+DefaultInPorts=MIDA0001000DMy Controller
+DefaultOutPorts=MIDA0000
+Version=2
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=hCnmbSHqTBqlE7T/BfQuRJiFuMVs+IvKmQmEtOr4lkMp3YMsGQouvC0gbtwJss3fkB+zBBB2c5gtC9dAPZs/dra0TCRzMGRALXSSQTbKGTzynZElikXcJHX9T3ItVhw63YA3ci0wZiq6QEgBtIo9PgP5UuiO/QgeFy/tPa+yhvk=
+SignedBy-1=Steve Caldwell
+

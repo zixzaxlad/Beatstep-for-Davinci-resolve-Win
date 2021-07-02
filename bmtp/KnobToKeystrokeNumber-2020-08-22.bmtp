@@ -1,0 +1,198 @@
+; ------- Bome MIDI Translator: Signed Project File
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[Preset.0]
+Name=Knob Input
+Active=1
+Comments=
+PresetSwitchIgnore=0
+DefaultInPorts=MIDA0001000FFrom Controller
+Name0=Knob Movement
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="oo" Type="SetVar"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing0=Tim0TimS000EDelayed Number1:200:1
+Options0=Actv01Stop00OutO00StMa0000000Blabel000B__cmt>// galabel001F__cmt>// bits 0-7 initial valuelabel0015__cmt>// bits 9-12 1slabel0017__cmt>// bits 13-16 10slabel0018__cmt>// bits 17-20 100slabel0018__cmt>// Check CC Numberlabel0035__cmt>//if oo>1 then exit rules, skip Outgoing Actionlabel0006__cmt>ga=pplabel001E__cmt>// set cc number for pregb=oo
+Name1=Send Pre
+Incoming1=Tim0TimT000EDelayed Number
+Outgoing1=Tim0TimS0008Send Pre1:0:1
+Options1=Actv01Stop00OutO00StMa00000001label0006__cmt>
+Name2=Send 100s digit
+Incoming2=Tim0TimT000EDelayed Number
+Outgoing2=Tim0TimS000FSend 100s Digit1:5:1
+Options2=Actv01Stop00OutO00StMa00000007pp=ga/100label0015__log>Log 100s = %pp%label0033__cmt>//  uncomment below to suppress leading digitif(pp==0)noexecutepp=pp<<16ga=ga|pplabel0006__cmt>
+Name3=Send 10s digit
+Incoming3=Tim0TimT000EDelayed Number
+Outgoing3=Tim0TimS000ESend 10s Digit1:10:1
+Options3=Actv01Stop00OutO00StMa0000000App=ga&127rr=ppif(pp>99)pp=pp-100qq=pp/10label0014__log>Log 10s = %qq%qq=qq<<12ga=ga|qqlabel0006__cmt>label0036__cmt>//uncomment below to suppress leading 10's digitif(rr<10)noexecute
+Name4=Send 1s digit
+Incoming4=Tim0TimT000EDelayed Number
+Outgoing4=Tim0TimS000DSend 1s Digit1:15:1
+Options4=Actv01Stop00OutO00StMa00000005pp=ga&127pp=pp%10label0013__log>Log 1s = %pp%pp=pp<<8ga=ga|pp
+Name5=Send Post
+Incoming5=Tim0TimT000EDelayed Number
+Outgoing5=Tim0TimS0009Send POST1:20:1
+Options5=Actv01Stop00OutO00StMa00000001label0006__cmt>
+[Preset.1]
+Name=Send 100s digit
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=Digit 0
+Incoming0=Tim0TimT000FSend 100s Digit
+Outgoing0=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="0"/></Keys></Outgoing>
+Options0=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=0)noexecute
+Name1=Digit 1
+Incoming1=Tim0TimT000FSend 100s Digit
+Outgoing1=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="1"/></Keys></Outgoing>
+Options1=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=1)noexecute
+Name2=Digit 2
+Incoming2=Tim0TimT000FSend 100s Digit
+Outgoing2=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="2"/></Keys></Outgoing>
+Options2=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=2)noexecute
+Name3=Digit 3
+Incoming3=Tim0TimT000FSend 100s Digit
+Outgoing3=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="3"/></Keys></Outgoing>
+Options3=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=3)noexecute
+Name4=Digit 4
+Incoming4=Tim0TimT000FSend 100s Digit
+Outgoing4=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="4"/></Keys></Outgoing>
+Options4=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=4)noexecute
+Name5=Digit 5
+Incoming5=Tim0TimT000FSend 100s Digit
+Outgoing5=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="5"/></Keys></Outgoing>
+Options5=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=5)noexecute
+Name6=Digit 6
+Incoming6=Tim0TimT000FSend 100s Digit
+Outgoing6=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="6"/></Keys></Outgoing>
+Options6=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=6)noexecute
+Name7=Digit 7
+Incoming7=Tim0TimT000FSend 100s Digit
+Outgoing7=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="7"/></Keys></Outgoing>
+Options7=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=7)noexecute
+Name8=Digit 8
+Incoming8=Tim0TimT000FSend 100s Digit
+Outgoing8=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="8"/></Keys></Outgoing>
+Options8=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=8)noexecute
+Name9=Digit 9
+Incoming9=Tim0TimT000FSend 100s Digit
+Outgoing9=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="9"/></Keys></Outgoing>
+Options9=Actv01Stop00OutO00StMa00000002pp=ga>>16if(pp!=9)noexecute
+[Preset.2]
+Name=Send 10s digits
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=Digit 0
+Incoming0=Tim0TimT000ESend 10s Digit
+Outgoing0=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="0"/></Keys></Outgoing>
+Options0=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=0)noexecute
+Name1=Digit 1
+Incoming1=Tim0TimT000ESend 10s Digit
+Outgoing1=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="1"/></Keys></Outgoing>
+Options1=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=1)noexecute
+Name2=Digit 2
+Incoming2=Tim0TimT000ESend 10s Digit
+Outgoing2=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="2"/></Keys></Outgoing>
+Options2=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=2)noexecute
+Name3=Digit 3
+Incoming3=Tim0TimT000ESend 10s Digit
+Outgoing3=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="3"/></Keys></Outgoing>
+Options3=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=3)noexecute
+Name4=Digit 4
+Incoming4=Tim0TimT000ESend 10s Digit
+Outgoing4=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="4"/></Keys></Outgoing>
+Options4=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=4)noexecute
+Name5=Digit 5
+Incoming5=Tim0TimT000ESend 10s Digit
+Outgoing5=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="5"/></Keys></Outgoing>
+Options5=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=5)noexecute
+Name6=Digit 6
+Incoming6=Tim0TimT000ESend 10s Digit
+Outgoing6=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="6"/></Keys></Outgoing>
+Options6=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=6)noexecute
+Name7=Digit 7
+Incoming7=Tim0TimT000ESend 10s Digit
+Outgoing7=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="7"/></Keys></Outgoing>
+Options7=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=7)noexecute
+Name8=Digit 8
+Incoming8=Tim0TimT000ESend 10s Digit
+Outgoing8=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="8"/></Keys></Outgoing>
+Options8=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=8)noexecute
+Name9=Digit 9
+Incoming9=Tim0TimT000ESend 10s Digit
+Outgoing9=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="9"/></Keys></Outgoing>
+Options9=Actv01Stop00OutO00StMa00000003pp=ga>>12pp=pp&15if(pp!=9)noexecute
+[Preset.3]
+Name=Send 1s digits
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=Digit 0
+Incoming0=Tim0TimT000DSend 1s Digit
+Outgoing0=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="0"/></Keys></Outgoing>
+Options0=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=0)noexecute
+Name1=Digit 1
+Incoming1=Tim0TimT000DSend 1s Digit
+Outgoing1=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="1"/></Keys></Outgoing>
+Options1=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=1)noexecute
+Name2=Digit 2
+Incoming2=Tim0TimT000DSend 1s Digit
+Outgoing2=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="2"/></Keys></Outgoing>
+Options2=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=2)noexecute
+Name3=Digit 3
+Incoming3=Tim0TimT000DSend 1s Digit
+Outgoing3=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="3"/></Keys></Outgoing>
+Options3=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=3)noexecute
+Name4=Digit 4
+Incoming4=Tim0TimT000DSend 1s Digit
+Outgoing4=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="4"/></Keys></Outgoing>
+Options4=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=4)noexecute
+Name5=Digit 5
+Incoming5=Tim0TimT000DSend 1s Digit
+Outgoing5=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="5"/></Keys></Outgoing>
+Options5=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=5)noexecute
+Name6=Digit 6
+Incoming6=Tim0TimT000DSend 1s Digit
+Outgoing6=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="6"/></Keys></Outgoing>
+Options6=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=6)noexecute
+Name7=Digit 7
+Incoming7=Tim0TimT000DSend 1s Digit
+Outgoing7=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="7"/></Keys></Outgoing>
+Options7=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=7)noexecute
+Name8=Digit 8
+Incoming8=Tim0TimT000DSend 1s Digit
+Outgoing8=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="8"/></Keys></Outgoing>
+Options8=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=8)noexecute
+Name9=Digit 9
+Incoming9=Tim0TimT000DSend 1s Digit
+Outgoing9=KAM3<Outgoing Action="KeyStrokes"><Type>Text</Type><Keys><Key Char="9"/></Keys></Outgoing>
+Options9=Actv01Stop00OutO00StMa00000003pp=ga>>8pp=pp&15if(pp!=9)noexecute
+[Preset.4]
+Name=Send Other keys
+Active=1
+Comments=
+PresetSwitchIgnore=0
+Name0=Send Pre CC0
+Incoming0=Tim0TimT0008Send Pre
+Outgoing0=KAM10100KSQ1001201201012E32E210212011211010043243043243210030230020220
+Options0=Actv01Stop00OutO00StMa00000001if(gb!=0)noexecute
+Name1=Send Pre CC1
+Incoming1=Tim0TimT0008Send Pre
+Outgoing1=KAM10100KSQ1001201201012E32E210212011211010043243043243210031231020220
+Options1=Actv01Stop00OutO00StMa00000001if(gb!=1)noexecute
+Name2=Send Pre Unknown
+Incoming2=Tim0TimT0008Send Pre
+Outgoing2=KAM10100KSQ1002201201012E32E21021201121101005525521004E24E04B24B04E24E04F24F05725704E24E020220010043243043243210020220
+Options2=Actv01Stop00OutO00StMa00000001if(gb<2)noexecute
+Name3=Send Post
+Incoming3=Tim0TimT0009Send POST
+Outgoing3=KAM10100KSQ1000200D20D
+Options3=Actv00Stop00OutO00
+[Project]
+Version=2
+DefaultInPorts=MIDA0000
+DefaultOutPorts=MIDA0000
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=fPHE0gfz0eXQ0N+vZRN7nb4BCMseRKSoAVNj2RJxkXp0V/UA28J2mVp25u/XQ4wHAjzMcKvODvPoo5lpmMHp7k8k5Rwmwqj049Xf2VBSPVBGFsMlMDyU9ZVH5W+usspxy+DqR6XRsvXjXHES3z8bWox7JEHWNR700d8CTMhrNxI=
+SignedBy-1=Steve Caldwell
