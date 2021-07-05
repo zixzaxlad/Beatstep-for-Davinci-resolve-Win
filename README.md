@@ -37,5 +37,5 @@ A: Test it, come up with a better structure, add function by yourself, everythin
 
 If this project helped you and you have spare money feel free to buy me a coffee.
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/myaccount/transfer/homepage/buy/preview)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/osprofool?locale.x=en_US)
 
