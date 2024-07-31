@@ -1,0 +1,648 @@
+; ------- Bome MIDI Translator: signed project file
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[Preset.0]
+Active=0
+Comments=
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x2C"/><Value2 num="0x79"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming2=Tim0TimT000AExposition
+Incoming3=Tim0TimT000AExposition
+Name=New Preset
+Name0=New Translator
+Name1=Exposition
+Name2=ExpositionUp
+Name3=ExpositionDown
+Options0=Actv00Stop00OutO00
+Options1=Actv01Stop00OutO00StMa00000011label0015__cmt>// Calculate qqqq=pp-galabel0006__cmt>label0029__cmt>// Check if at minimum position (0)if(pp==0)gc=1label0006__cmt>label002B__cmt>// Check if at maximum position (127)if(pp==127)gc=128label0006__cmt>label001C__cmt>// If counterclockwiseif(qq<0)gc=1label0006__cmt>label0015__cmt>// If clockwiseif(qq>0)gc=128label0006__cmt>label0014__cmt>// Reset valuega=pp
+Options2=Actv00Stop00OutO00StMa00000001if(gc==1)noexecute
+Options3=Actv00Stop00OutO00StMa00000001if(gc==128)noexecute
+Outgoing0=KAM3<Outgoing Action="KeyStrokes"><Type>Shortcut</Type><Keys><Key VK="18"/><Key VK="9"/><Key Release="Y" VK="9"/><Key Release="Y" VK="18"/></Keys></Outgoing>
+Outgoing1=Tim0TimS000AExposition1:0:1
+Outgoing2=KAM3<Outgoing Action="KeyStrokes"><Type>Shortcut</Type><Keys><Key VK="17"/><Key VK="9"/><Key Release="Y" VK="9"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Outgoing3=KAM3<Outgoing Action="KeyStrokes"><Type>Shortcut</Type><Keys><Key VK="16"/><Key VK="17"/><Key VK="9"/><Key Release="Y" VK="9"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+PresetSwitchIgnore=0
+
+[Preset.1]
+Active=0
+Comments=
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x41"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 num="0x3F"/></Simple></Incoming>
+Name=New (2) Preset
+Name0=ExposureUP
+Name1=ExposureDown
+Options0=Actv01Stop00OutO00
+Options1=Actv01Stop00OutO00
+Outgoing0=KAM3<Outgoing Action="KeyStrokes"><Type>Shortcut</Type><Keys><Key VK="17"/><Key VK="9"/><Key Release="Y" VK="9"/><Key Release="Y" VK="17"/></Keys></Outgoing>
+Outgoing1=KAM3<Outgoing Action="KeyStrokes"><Type>Shortcut</Type><Keys><Key VK="16"/><Key VK="17"/><Key VK="9"/><Key Release="Y" VK="9"/><Key Release="Y" VK="17"/><Key Release="Y" VK="16"/></Keys></Outgoing>
+PresetSwitchIgnore=0
+
+[Preset.2]
+Active=1
+Comments=
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x28"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming11=Pres04000CColor Wheels
+Incoming12=Pres040011Color per control
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x2B"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x24"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x25"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x26"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming6=Tim0TimT0004page
+Incoming7=Tim0TimT0004page
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="NoteOff"><Channel num="0"/><Value1 num="0x27"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x28"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Name=Page
+Name0=Page selection
+Name1=Page selection
+Name10=switch to color per control
+Name11=Active color wheel
+Name12=Active color wheel
+Name13=Toggle gd
+Name14=reset trigger
+Name15=reset trigger
+Name2=Page selection
+Name3=Media page
+Name4=Edit page
+Name5=Color page
+Name6=Display page overlay
+Name7=Hide page overlay
+Name8=toggle ge
+Name9=switch to color wheel
+Options0=Actv00Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label0019__cmt>// Button A pressedif(pp>1)gc=1label001A__cmt>// Button A releasedif(pp==1)gc=0
+Options1=Actv01Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label0019__cmt>// Button A pressedif(pp>1)gc=1label001A__cmt>// Button A releasedif(pp==1)noexecute
+Options10=Actv01Stop00OutO00StMa00000004ge=ge+1if(ge>1)ge=0label0006__cmt>if(ge==0)execute
+Options11=Actv01Stop00OutO00
+Options12=Actv01Stop00OutO00
+Options13=Actv01Stop00OutO00StMa00000003gd=gd+1if(gd>1)gd=0label0006__cmt>
+Options14=Actv01Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label0019__cmt>// Button A pressedif(pp>1)gc=1label001A__cmt>// Button A releasedif(pp==1)noexecute
+Options15=Actv01Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label001B__cmt>// Button A realeasedif(pp==1)gc=0label0019__cmt>// Button A pressedif(pp>1)noexecute
+Options2=Actv01Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label001B__cmt>// Button A realeasedif(pp==1)gc=0label0019__cmt>// Button A pressedif(pp>1)noexecute
+Options3=Actv01Stop00OutO00StMa00000004label0025__cmt>// Check if Button A is pressedif(gc==1)executeif(gc==0)noexecutelabel0006__cmt>
+Options4=Actv01Stop00OutO00StMa00000004label0025__cmt>// Check if Button A is pressedif(gc==1)executeif(gc==0)noexecutelabel0006__cmt>
+Options5=Actv01Stop00OutO00StMa00000004label0025__cmt>// Check if Button A is pressedif(gc==1)executeif(gc==0)noexecutelabel0006__cmt>
+Options6=Actv00Stop00OutO00StMa00000001if(gc==1)execute
+Options7=Actv00Stop00OutO00StMa00000001if(gc==0)execute
+Options8=Actv00Stop00OutO00StMa00000002ge=ge+1if(ge>1)ge=0
+Options9=Actv01Stop00OutO00StMa00000004ge=ge+1if(ge>1)ge=0label0006__cmt>if(ge==1)execute
+Outgoing0=None
+Outgoing1=None
+Outgoing10=Pres040011Color per control
+Outgoing11=Pres060011Color per control
+Outgoing12=Pres06000CColor Wheels
+Outgoing13=None
+Outgoing14=None
+Outgoing15=None
+Outgoing2=None
+Outgoing3=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1383"/><Y num="2065"/></Outgoing>
+Outgoing4=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1737"/><Y num="2067"/></Outgoing>
+Outgoing5=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="2098"/><Y num="2058"/></Outgoing>
+Outgoing6=ExF1005EC:\Users\ospro\OneDrive\Github\Beatstep-for-Davinci-resolve-Win\ahk\display page selection.ahk0000
+Outgoing7=ExF10052C:\Users\ospro\OneDrive\Github\Beatstep-for-Davinci-resolve-Win\ahk\hide image.ahk0000
+Outgoing8=None
+Outgoing9=Pres04000CColor Wheels
+PresetSwitchIgnore=1
+
+[Preset.3]
+Active=0
+Comments=
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x2B"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x2B"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming18=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming19=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming2=Tim0TimT0008Click up
+Incoming20=Tim0TimT0008Click up
+Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming22=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming28=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming29=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming31=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming33=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming34=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming35=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming36=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming37=Tim0TimT0008Click up
+Incoming38=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming39=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming40=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming43=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming44=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming45=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming46=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming47=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming48=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming49=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming50=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming51=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming52=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming53=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming54=Tim0TimT0008Click up
+Incoming55=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x49"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming56=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x49"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming57=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x49"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming58=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming59=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming60=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming61=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x48"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming62=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x48"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming63=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x48"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming64=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4F"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming65=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4F"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming66=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4F"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming67=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming68=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming69=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x33"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming70=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x2F"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming71=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x30"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming72=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x31"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming73=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x32"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming74=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming75=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x2D"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming76=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x2C"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming77=MID3<Incoming Action="MIDI"><Simple Type="PolyphonicKeyPressure"><Channel num="0"/><Value1 num="0x2E"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Name=Color Wheels
+Name0=Toggle speed control
+Name1=Toggle gd
+Name10=click down upon movement
+Name11=Drag the mouse
+Name12=Set up click up timer
+Name13=click down upon movement
+Name14=Drag the mouse
+Name15=Set up click up timer
+Name16=click down upon movement
+Name17=Drag the mouse
+Name18=Set up click up timer
+Name19=Gamma----------------------------------------------------------------------
+Name2=Click up
+Name20=Click up
+Name21=click down upon movement
+Name22=Drag the mouse
+Name23=Set up click up timer
+Name24=click down upon movement
+Name25=Drag the mouse
+Name26=Set up click up timer
+Name27=click down upon movement
+Name28=Drag the mouse
+Name29=Set up click up timer
+Name3=Lift----------------------------------------------------------------------
+Name30=click down upon movement
+Name31=Drag the mouse
+Name32=Set up click up timer
+Name33=click down upon movement
+Name34=Drag the mouse
+Name35=Set up click up timer
+Name36=Gain----------------------------------------------------------------------
+Name37=Click up
+Name38=click down upon movement
+Name39=Drag the mouse
+Name4=click down upon movement
+Name40=Set up click up timer
+Name41=click down upon movement
+Name42=Drag the mouse
+Name43=Set up click up timer
+Name44=click down upon movement
+Name45=Drag the mouse
+Name46=Set up click up timer
+Name47=click down upon movement
+Name48=Drag the mouse
+Name49=Set up click up timer
+Name5=Drag the mouse
+Name50=click down upon movement
+Name51=Drag the mouse
+Name52=Set up click up timer
+Name53=Master-------------------------------------------------------------
+Name54=Click up
+Name55=click down upon movement
+Name56=Drag the mouse
+Name57=Set up click up timer
+Name58=click down upon movement
+Name59=Drag the mouse
+Name6=Set up click up timer
+Name60=Set up click up timer
+Name61=click down upon movement
+Name62=Drag the mouse
+Name63=Set up click up timer
+Name64=click down upon movement
+Name65=Drag the mouse
+Name66=Set up click up timer
+Name67=reset-------------------------------------------------------------------
+Name68=reset trigger
+Name69=reset trigger
+Name7=click down upon movement
+Name70=reset lift
+Name71=reset gamma
+Name72=reset gain
+Name73=reset master
+Name74=color bar------------------------------------------------------
+Name75=switch to color bar
+Name76=switch to primary
+Name77=switch to log
+Name8=Drag the mouse
+Name9=Set up click up timer
+Options0=Actv00Stop00OutO00StMa00000005label0033__cmt>// Toggle the state of the global variable gdgd=gd+1if(gd>=2)gd=0label0006__cmt>label0006__cmt>
+Options1=Actv00Stop00OutO00StMa00000003gd=gd+1if(gd>1)gd=0label0006__cmt>
+Options10=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options11=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options12=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options13=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==1)noexecuteif(gb==1)noexecuteif(gc==0)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options14=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options15=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options16=Actv01Stop00OutO00StMa00000025label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=200label001A__cmt>// vertical locationvv=1936label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gc==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againlabel0006__cmt>if(gc==0)noexecuteif(gb==1)noexecuteif(gc==1)gb=1gb=1label0006__cmt>label0031__cmt>// now set gc to 1 so next action will firelabel0006__cmt>label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>label004B__cmt>//if zz==1 then Log "Mouse move  at x=%uu% and y=%vv% and click down"label0006__cmt>label0036__cmt>//if zz==1 then exit rules, skip Outgoing Action
+Options17=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options18=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options19=Actv00Stop00OutO00
+Options2=Actv01Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options20=Actv00Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options21=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options22=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options23=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options24=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options25=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options26=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options27=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options28=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options29=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options3=Actv00Stop00OutO00
+Options30=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==1)noexecuteif(gb==1)noexecuteif(gc==0)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options31=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options32=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options33=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==0)noexecuteif(gb==1)noexecuteif(gc==1)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options34=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options35=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options36=Actv00Stop00OutO00
+Options37=Actv00Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options38=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options39=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0027__cmt>// add a multiplier5 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options4=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options40=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options41=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options42=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options43=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options44=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options45=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options46=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options47=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==1)noexecuteif(gb==1)noexecuteif(gc==0)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options48=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options49=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options5=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options50=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==0)noexecuteif(gb==1)noexecuteif(gc==1)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options51=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options52=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options53=Actv00Stop00OutO00
+Options54=Actv00Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options55=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options56=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/15label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options57=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options58=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options59=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options6=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options60=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options61=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options62=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options63=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options64=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options65=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options66=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options67=Actv00Stop00OutO00
+Options68=Actv00Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label0019__cmt>// Button A pressedif(pp>1)gc=1label001A__cmt>// Button A releasedif(pp==1)noexecute
+Options69=Actv00Stop00OutO00StMa00000005label0024__cmt>// Toggle switch variable (ga)label001B__cmt>// Button A realeasedif(pp==1)gc=0label0019__cmt>// Button A pressedif(pp>1)noexecute
+Options7=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options70=Actv01Stop00OutO00StMa00000002if(gc==1)executeif(gc==0)noexecute
+Options71=Actv01Stop00OutO00StMa00000002if(gc==1)executeif(gc==0)noexecute
+Options72=Actv01Stop00OutO00StMa00000002if(gc==1)executeif(gc==0)noexecute
+Options73=Actv01Stop00OutO00StMa00000002if(gc==1)executeif(gc==0)noexecute
+Options74=Actv00Stop00OutO00
+Options75=Actv01Stop00OutO00
+Options76=Actv01Stop00OutO00
+Options77=Actv01Stop00OutO00
+Options8=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options9=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Outgoing0=None
+Outgoing1=None
+Outgoing10=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="290"/><Y num="1884"/></Outgoing>
+Outgoing11=Mse200rr:0
+Outgoing12=Tim0TimS0008Click up1:250:1
+Outgoing13=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="116"/><Y num="1887"/></Outgoing>
+Outgoing14=Mse200rr:0
+Outgoing15=Tim0TimS0008Click up1:250:1
+Outgoing16=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X var="uu"/><Y var="vv"/></Outgoing>
+Outgoing17=Mse200rr:0
+Outgoing18=Tim0TimS0008Click up1:250:1
+Outgoing19=None
+Outgoing2=Mse10400
+Outgoing20=Mse10400
+Outgoing21=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="518"/><Y num="1888"/></Outgoing>
+Outgoing22=Mse200rr:0
+Outgoing23=Tim0TimS0008Click up1:250:1
+Outgoing24=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="574"/><Y num="1887"/></Outgoing>
+Outgoing25=Mse200rr:0
+Outgoing26=Tim0TimS0008Click up1:250:1
+Outgoing27=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="630"/><Y num="1886"/></Outgoing>
+Outgoing28=Mse200rr:0
+Outgoing29=Tim0TimS0008Click up1:250:1
+Outgoing3=None
+Outgoing30=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="460"/><Y num="1888"/></Outgoing>
+Outgoing31=Mse200rr:0
+Outgoing32=Tim0TimS0008Click up1:250:1
+Outgoing33=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="543"/><Y num="1939"/></Outgoing>
+Outgoing34=Mse200rr:0
+Outgoing35=Tim0TimS0008Click up1:250:1
+Outgoing36=None
+Outgoing37=Mse10400
+Outgoing38=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="861"/><Y num="1887"/></Outgoing>
+Outgoing39=Mse200rr:0
+Outgoing4=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="174"/><Y num="1888"/></Outgoing>
+Outgoing40=Tim0TimS0008Click up1:250:1
+Outgoing41=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="916"/><Y num="1889"/></Outgoing>
+Outgoing42=Mse200rr:0
+Outgoing43=Tim0TimS0008Click up1:250:1
+Outgoing44=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="976"/><Y num="1887"/></Outgoing>
+Outgoing45=Mse200rr:0
+Outgoing46=Tim0TimS0008Click up1:250:1
+Outgoing47=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="805"/><Y num="1891"/></Outgoing>
+Outgoing48=Mse200rr:0
+Outgoing49=Tim0TimS0008Click up1:250:1
+Outgoing5=Mse200rr:0
+Outgoing50=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="885"/><Y num="1940"/></Outgoing>
+Outgoing51=Mse200rr:0
+Outgoing52=Tim0TimS0008Click up1:250:1
+Outgoing53=None
+Outgoing54=Mse10400
+Outgoing55=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="1154"/><Y num="1887"/></Outgoing>
+Outgoing56=Mse200rr:0
+Outgoing57=Tim0TimS0008Click up1:250:1
+Outgoing58=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="1228"/><Y num="1885"/></Outgoing>
+Outgoing59=Mse200rr:0
+Outgoing6=Tim0TimS0008Click up1:250:1
+Outgoing60=Tim0TimS0008Click up1:250:1
+Outgoing61=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="1304"/><Y num="1886"/></Outgoing>
+Outgoing62=Mse200rr:0
+Outgoing63=Tim0TimS0008Click up1:250:1
+Outgoing64=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="1228"/><Y num="1935"/></Outgoing>
+Outgoing65=Mse200rr:0
+Outgoing66=Tim0TimS0008Click up1:250:1
+Outgoing67=None
+Outgoing68=None
+Outgoing69=None
+Outgoing7=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="230"/><Y num="1886"/></Outgoing>
+Outgoing70=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="336"/><Y num="1553"/></Outgoing>
+Outgoing71=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="681"/><Y num="1553"/></Outgoing>
+Outgoing72=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1021"/><Y num="1553"/></Outgoing>
+Outgoing73=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1362"/><Y num="1553"/></Outgoing>
+Outgoing74=None
+Outgoing75=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1312"/><Y num="1433"/></Outgoing>
+Outgoing76=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1270"/><Y num="1430"/></Outgoing>
+Outgoing77=Mse3<Outgoing Action="Mouse"><Type>Click</Type><Button num="0"/><X num="1351"/><Y num="1433"/></Outgoing>
+Outgoing8=Mse200rr:0
+Outgoing9=Tim0TimS0008Click up1:250:1
+PresetSwitchIgnore=0
+
+[Preset.4]
+Active=1
+Comments=
+Incoming0=Tim0TimT0008Click up
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming18=Tim0TimT0008Click up
+Incoming19=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming20=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming21=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming22=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x10"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming28=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming29=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming31=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming33=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x13"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming34=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming35=Tim0TimT0008Click up
+Incoming36=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming37=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming38=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming39=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x0A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming40=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming43=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming44=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming45=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming46=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming47=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming48=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming49=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming50=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x11"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x12"/><Value2 var="qq" Type="SetVar"/></Simple></Incoming>
+Name=Color per control
+Name0=Click up
+Name1=Top---------------------------------------------------------------------
+Name10=Set up click up timer
+Name11=click down upon movement
+Name12=Drag the mouse
+Name13=Set up click up timer
+Name14=click down upon movement
+Name15=Drag the mouse
+Name16=Set up click up timer
+Name17=Gamma----------------------------------------------------------------------
+Name18=Click up
+Name19=click down upon movement
+Name2=click down upon movement
+Name20=Drag the mouse
+Name21=Set up click up timer
+Name22=click down upon movement
+Name23=Drag the mouse
+Name24=Set up click up timer
+Name25=click down upon movement
+Name26=Drag the mouse
+Name27=Set up click up timer
+Name28=click down upon movement
+Name29=Drag the mouse
+Name3=Drag the mouse
+Name30=Set up click up timer
+Name31=click down upon movement
+Name32=Drag the mouse
+Name33=Set up click up timer
+Name34=Gain----------------------------------------------------------------------
+Name35=Click up
+Name36=click down upon movement
+Name37=Drag the mouse
+Name38=Set up click up timer
+Name39=click down upon movement
+Name4=Set up click up timer
+Name40=Drag the mouse
+Name41=Set up click up timer
+Name42=click down upon movement
+Name43=Drag the mouse
+Name44=Set up click up timer
+Name45=click down upon movement
+Name46=Drag the mouse
+Name47=Set up click up timer
+Name48=click down upon movement
+Name49=Drag the mouse
+Name5=click down upon movement
+Name50=Set up click up timer
+Name6=Drag the mouse
+Name7=Set up click up timer
+Name8=click down upon movement
+Name9=Drag the mouse
+Options0=Actv01Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options1=Actv00Stop00OutO00
+Options10=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options11=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==1)noexecuteif(gb==1)noexecuteif(gc==0)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options12=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options13=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options14=Actv01Stop00OutO00StMa00000025label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=200label001A__cmt>// vertical locationvv=1936label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gc==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againlabel0006__cmt>if(gc==0)noexecuteif(gb==1)noexecuteif(gc==1)gb=1gb=1label0006__cmt>label0031__cmt>// now set gc to 1 so next action will firelabel0006__cmt>label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>label004B__cmt>//if zz==1 then Log "Mouse move  at x=%uu% and y=%vv% and click down"label0006__cmt>label0036__cmt>//if zz==1 then exit rules, skip Outgoing Action
+Options15=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options16=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options17=Actv00Stop00OutO00
+Options18=Actv00Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options19=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options2=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options20=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options21=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options22=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options23=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options24=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options25=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options26=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options27=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options28=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==1)noexecuteif(gb==1)noexecuteif(gc==0)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options29=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options3=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options30=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options31=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==0)noexecuteif(gb==1)noexecuteif(gc==1)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options32=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options33=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options34=Actv00Stop00OutO00
+Options35=Actv00Stop00OutO00StMa0000000Elabel003F__cmt>// set the click down variable ga back to 0 to set up forlabel0023__cmt>// next click and drag actionlabel002D__cmt>// only click up if previous click downif(gb==1)gb=0label002F__cmt>// forgot the outgoing action of click uplabel0006__cmt>label002E__cmt>// So I had to do some tweaking with thelabel002C__cmt>// multiplier to get it working right.label003A__cmt>// I also recommend you use relative encoder insteadlabel0037__cmt>// of absolute so that you don't have problems iflabel001E__cmt>// you get to end valueslabel0006__cmt>if(zz==1)label000E__log>Click Upif(zz==1)noexecute
+Options36=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options37=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0027__cmt>// add a multiplier5 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options38=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options39=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options4=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options40=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options41=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options42=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options43=Actv01Stop00OutO00Dlay5:MillisStMa00000015label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caselabel0006__cmt>if(gd==1)rr=rr/5label0006__cmt>rr=rr*-1label0006__cmt>label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options44=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options45=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==1)noexecuteif(gb==1)noexecuteif(gc==0)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options46=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options47=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options48=Actv01Stop00OutO00StMa00000023label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gc==0)noexecuteif(gb==1)noexecuteif(gc==1)gb=1gb=1label0006__cmt>label0031__cmt>// now set ga to 1 so next action will firelabel003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options49=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options5=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if ga==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options50=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options6=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Options7=Actv01Stop00OutO00StMa00000004label003D__cmt>// This is used to automatically click up if no movmentlabel0032__cmt>// In this case we will set it up for 250 mslabel0006__cmt>if(zz==1)label001D__log>Starting one shot Timer
+Options8=Actv01Stop00OutO00StMa00000020label0020__cmt>//click down upon movementlabel0006__cmt>label0027__cmt>// debug 1 for debug 0 for normalzz=0label0006__cmt>label001E__cmt>// Manually set positionlabel0028__cmt>// Use Capture in outgoing actionslabel002C__cmt>// if you want to click at the desiredlabel0011__cmt>// locationlabel001C__cmt>// Horizontal locationuu=174label001A__cmt>// vertical locationvv=1888label0006__cmt>label0033__cmt>// qq is local variable which means any valuelabel0012__cmt>// set to qqlabel0029__cmt>// first lets make sure we have notlabel002B__cmt>// already clicked. We use the globallabel002A__cmt>// variable ga (which is normally 0)label0030__cmt>// to determine if we have already clickedlabel0034__cmt>// if gb==1 then we alread clicked so we don'tlabel001C__cmt>// want to click againif(gb==1)noexecutelabel0031__cmt>// now set ga to 1 so next action will firegb=1label003C__cmt>// below we captured the screen position. In this caselabel0040__cmt>// I'm on the left monitor which is to the left of my mainlabel0039__cmt>// monitor so the mouse position for x is negaativelabel0006__cmt>if(zz==1)label0035__log>Mouse move  at x=%uu% and y=%vv% and click downlabel0006__cmt>if(zz==1)noexecute
+Options9=Actv01Stop00OutO00Dlay5:MillisStMa00000012label0016__cmt>//Drag the mouselabel0006__cmt>label0041__cmt>// here we don't do anything unless we have already clickedif(gb==0)noexecutelabel004C__cmt>// We need to drag the mouse here left or right depending of the valuelabel003E__cmt>// qq we save the last value of qq in global variable gbif(qq>64)rr=128-qqif(qq>64)rr=rr*-1if(qq<64)rr=qqlabel0006__cmt>label0029__cmt>// add a multiplier. 3 in this caseif(gd==1)rr=rr/5rr=rr*-1label0033__cmt>// lets put a bit of delay on the drag actionlabel0006__cmt>if(zz==1)label0013__log>Dragging %rr%label0006__cmt>if(zz==1)noexecute
+Outgoing0=Mse10400
+Outgoing1=None
+Outgoing10=Tim0TimS0008Click up1:250:1
+Outgoing11=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="1109"/><Y num="1485"/></Outgoing>
+Outgoing12=Mse200rr:0
+Outgoing13=Tim0TimS0008Click up1:250:1
+Outgoing14=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="1365"/><Y num="1483"/></Outgoing>
+Outgoing15=Mse200rr:0
+Outgoing16=Tim0TimS0008Click up1:250:1
+Outgoing17=None
+Outgoing18=Mse10400
+Outgoing19=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="518"/><Y num="1888"/></Outgoing>
+Outgoing2=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="330"/><Y num="1484"/></Outgoing>
+Outgoing20=Mse200rr:0
+Outgoing21=Tim0TimS0008Click up1:250:1
+Outgoing22=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="574"/><Y num="1887"/></Outgoing>
+Outgoing23=Mse200rr:0
+Outgoing24=Tim0TimS0008Click up1:250:1
+Outgoing25=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="630"/><Y num="1886"/></Outgoing>
+Outgoing26=Mse200rr:0
+Outgoing27=Tim0TimS0008Click up1:250:1
+Outgoing28=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="460"/><Y num="1888"/></Outgoing>
+Outgoing29=Mse200rr:0
+Outgoing3=Mse200rr:0
+Outgoing30=Tim0TimS0008Click up1:250:1
+Outgoing31=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="543"/><Y num="1939"/></Outgoing>
+Outgoing32=Mse200rr:0
+Outgoing33=Tim0TimS0008Click up1:250:1
+Outgoing34=None
+Outgoing35=Mse10400
+Outgoing36=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="861"/><Y num="1887"/></Outgoing>
+Outgoing37=Mse200rr:0
+Outgoing38=Tim0TimS0008Click up1:250:1
+Outgoing39=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="916"/><Y num="1889"/></Outgoing>
+Outgoing4=Tim0TimS0008Click up1:250:1
+Outgoing40=Mse200rr:0
+Outgoing41=Tim0TimS0008Click up1:250:1
+Outgoing42=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="976"/><Y num="1887"/></Outgoing>
+Outgoing43=Mse200rr:0
+Outgoing44=Tim0TimS0008Click up1:250:1
+Outgoing45=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="805"/><Y num="1891"/></Outgoing>
+Outgoing46=Mse200rr:0
+Outgoing47=Tim0TimS0008Click up1:250:1
+Outgoing48=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="885"/><Y num="1940"/></Outgoing>
+Outgoing49=Mse200rr:0
+Outgoing5=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="595"/><Y num="1487"/></Outgoing>
+Outgoing50=Tim0TimS0008Click up1:250:1
+Outgoing6=Mse200rr:0
+Outgoing7=Tim0TimS0008Click up1:250:1
+Outgoing8=Mse3<Outgoing Action="Mouse"><Type>ButtonDown</Type><Button num="0"/><X num="855"/><Y num="1486"/></Outgoing>
+Outgoing9=Mse200rr:0
+PresetSwitchIgnore=0
+
+[Project]
+DefaultInPorts=MIDA00010010Arturia BeatStep
+DefaultOutPorts=MIDA0000
+Version=2
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=ErlxBI2E8cQ07P8yG9fPowHduqkzakQHHxdevMCoCEJ+iE58nGIYsW6awo2BX4yegqdBm64UjppI8tuq2+AO3T4me3VLklqsJyythrNDUh0IMYpTiaUTBzDnSzTAaSJQwJRvSX7J/+f9mOatI/7CA2ntoBnb/r5BOdW9P5WeVYE=
+SignedBy-1=Tim chou
+
